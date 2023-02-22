@@ -4,10 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platzi movies</title>
+    <title>Dillvana</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Righteous&display=swap" rel="stylesheet">
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body>
+    <header id="header" class="header-container">
+        <span class="header-arrow inactive">&lt;</span>
+        <h1 class="header-title">Dillvana</h1>
+        <h2 class="header-title header-title-categoryView inactive">Nombre de la categoría</h2>
+
+        <div id="toggleIcon" class="header-toggleIcon">
+            <span class="toggleIcon-line1"></span>
+            <span class="toggleIcon-line2"></span>
+            <span class="toggleIcon-line3"></span>
+        </div>
+
+        <aside id="asideMenu" class="header-asideMenu inactive">
+            <ul class="asideMenu-list">
+                <li class="asideMenu-item"><a href="#">Action</a></li>
+                <li class="asideMenu-item"><a href="#">Adventure</a></li>
+                <li class="asideMenu-item"><a href="#">Comedy</a></li>
+                <li class="asideMenu-item"><a href="#">Romance</a></li>
+                <li class="asideMenu-item"><a href="#">Musical</a></li>
+                <li class="asideMenu-item"><a href="#">Drama</a></li>
+            </ul>
+        </aside>
+
+        <form id="searchForm" class="header-searchForm">
+            <input type="text" placeholder="Avengers, Avatar, Creed...">
+            <button>🔎</button>
+        </form>
+    </header>
+    <section id="trendingPreview" class="trendingPreview-container">
+        <div class="trendingPreview-header">
+            <h2 class="trendingPreview-title">Trending movies</h2>
+            <button class="trendingPreview-button">Show more</button>
+        </div>
+
+        <article class="trendingPreview-moviesList">
+            <div class="movie-container">
+                <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            </div>
+            <div class="movie-container">
+                <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            </div>
+            <div class="movie-container">
+                <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            </div>
+        </article>
+
+        <div class="trendingPreview-header">
+            <h2 class="trendingPreview-title">Trending series</h2>
+            <button class="trendingPreview-button">Show more</button>
+        </div>
+
+        <article class="trendingPreview-seriesList">
+            <div class="movie-container">
+                <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            </div>
+            <div class="movie-container">
+                <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            </div>
+            <div class="movie-container">
+                <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            </div>
+        </article>
+    </section>
+    <section id="verticalList" class="verticalList-container inactive">
+        <div class="movie-container">
+            <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+        </div>
+        <div class="movie-container">
+            <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+        </div>
+        <div class="movie-container">
+            <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+        </div>
+        <div class="movie-container">
+            <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+        </div>
+    </section>
+    <section id="movieDetail" class="movieDetail-container">
+        <h2 class="movieDetail-title">The last of us</h2>
+        <span class="movieDetail-score">9.5</span>
+        <p class="movieDetail-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed dolores repellat. Laudantium, fugiat reprehenderit eum, ea voluptatem laborum rerum totam accusantium nobis ratione, harum error sed? Voluptatem, eligendi officia?
+        </p>
+        <article class="movieDetail-categoriesList">
+            <div class="category-container">
+                <h3 class="category-title">Drama</h3>
+            </div>
+            <div class="category-container">
+                <h3 class="category-title">Action
+                </h3>
+            </div>
+            <div class="category-container">
+                <h3 class="category-title">Adventure</h3>
+            </div>
+        </article>
+        <article class="relatedMovies-container">
+            <h2 class="relatedMovies-title">Related titles</h2>
+
+            <div class="relatedMovies-list">
+                <div class="movie-container">
+                    <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+                </div>
+                <div class="movie-container">
+                    <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+                </div>
+                <div class="movie-container">
+                    <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+                </div>
+            </div>
+        </article>
+    </section>
     <script src="./src/secret.js"></script>
     <script src="./src/main.js"></script>
 </body>
