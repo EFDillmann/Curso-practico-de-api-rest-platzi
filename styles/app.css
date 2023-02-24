@@ -23,6 +23,9 @@
     --fs-lg:2rem;
     --fs-md:1.5rem;
     --fs-sm:1rem;
+    
+    --border-r-btn: 10px;
+    --border-r-img: 20px;
 }
 
 /* General */
@@ -34,6 +37,13 @@ body{
     font-weight: var(--fw-ligth);
     padding: 0;
     width: 100%;
+}
+img{
+    border-radius: var(--border-r-img);
+    cursor: pointer;
+}
+.inactive{
+    display: none;
 }
 
 /* Texts */
@@ -72,7 +82,7 @@ p{
 
 button{
     background-color: var(--orange);
-    border-radius:0px 10px 10px 0px;
+    border-radius: var(--border-r-btn);
     border: none;
     padding: 4px;
     font-family: var(--font-family-titles);
@@ -86,7 +96,7 @@ input{
     background-color: var(--input-color);
     font-family: var(--font-family-text);
     font-size: var(--fs-sm);
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     border: none;
     border-radius: 10px 0px 0px 10px;
     padding: 3px 16px;
@@ -95,11 +105,10 @@ input{
 
 input::placeholder{
     color: rgba(255, 255, 255, 0.503);
+    font-weight: var(--fw-bold);
+    letter-spacing: 5px;
 }
 
-.inactive{
-    display: none;
-}
 
 /* Header */
 .header-container{
@@ -120,6 +129,7 @@ input::placeholder{
 .header-searchForm button {
     height: 4rem;
     width:3rem;
+    border-radius:0px 10px 10px 0px;
 }
 
 /* Toggle menú */
@@ -166,6 +176,4 @@ input::placeholder{
     justify-content: space-around;
 }
 
-.trendingPreview-moviesList{
-    display: flex;
-}
+/* Trending carrousel */
