@@ -49,7 +49,7 @@
 
         <article class="trendingPreview-moviesList">
             <div class="trendingPreview-slider">
-                <input type="radio" name="slider" id="item-1">
+                <input type="radio" name="slider" id="item-1" checked>
                 <input type="radio" name="slider" id="item-2">
                 <input type="radio" name="slider" id="item-3">
 
@@ -73,15 +73,23 @@
         </div>
 
         <article class="trendingPreview-seriesList">
-                <div class="movie-container">
-                    <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+            <div class="trendingPreview-slider">
+                <input type="radio" name="slider" id="item-4">
+                <input type="radio" name="slider" id="item-5">
+                <input type="radio" name="slider" id="item-6">
+
+                <div class="trendingPreview-posters">
+                    <label id="selector-4" for="item-4" class="poster">
+                        <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+                    </label>
+                    <label id="selector-5" for="item-5" class="poster">
+                        <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+                    </label>
+                    <label id="selector-6" for="item-6" class="poster">
+                        <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
+                    </label>
                 </div>
-                <div class="movie-container">
-                    <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
-                </div>
-                <div class="movie-container">
-                    <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
-                </div>
+            </div>
         </article>
     </section>
     <section id="verticalList" class="verticalList-container inactive">
