@@ -30,7 +30,7 @@
 
 /* General */
 html{
-    width: 100%;
+    width: 768px;
 }
 body{
     background-color: var(--dark-blue);
@@ -44,9 +44,6 @@ body{
 img{
     border-radius: var(--border-r-img);
     cursor: pointer;
-}
-.inactive{
-    display: none;
 }
 
 /* Texts */
@@ -162,6 +159,22 @@ input::placeholder{
 }
 .toggleIcon-line3Active{
     transform: rotate(-45deg) translate(-4px, 2px);
+}
+.header-asideMenu{
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--ligth-blue);
+    z-index: 2;
+}
+.asideMenu-list{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.asideMenu-item a{
+    color: var(--title-color);
 }
 
 /* Trending section */
@@ -290,4 +303,19 @@ footer{
     text-align: center;
     padding: 20px 0;
     background-color: var(--ligth-blue);
+}
+
+/* Vertical list */
+.verticalList-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Inactive */
+.inactive{
+    display: none;
 }
