@@ -114,7 +114,29 @@ input::placeholder{
 .header-container{
     width: 100%;
     text-align: center;
-    padding: 8px 0;
+}
+
+.header-container--img{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 19.27%, rgba(0,0,0,0) 29.17%);
+    background-image: url("https://pics.filmaffinity.com/the_last_of_us-722385305-large.jpg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.header-arrow{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-lg);
+    color: var(--orange);
 }
 
 .header-searchForm{
@@ -296,15 +318,6 @@ input::placeholder{
     z-index: 1;
 }
 
-/* Footer */
-footer{
-    width: 100%;
-    margin-top: 30px;
-    text-align: center;
-    padding: 20px 0;
-    background-color: var(--ligth-blue);
-}
-
 /* Vertical list */
 .verticalList-container{
     width: 100%;
@@ -313,6 +326,37 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+}
+
+/* Movie Detail */
+.movieDetail-container{
+    margin-top: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.movieDetail-categoriesList{
+    display: flex;
+    gap: 20px;
+}
+.relatedMovies-container h2{
+    margin-bottom: 10px;
+}
+.relatedMovies-list{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: scroll;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: var(--ligth-blue);
 }
 
 /* Inactive */
