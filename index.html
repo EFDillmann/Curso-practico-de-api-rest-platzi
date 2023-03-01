@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body>
-    <header id="header" class="header-container header-container--img">
-        <span class="header-arrow">&lt;</span>
-        <h1 class="header-title inactive">Dillvana 4</h1>
+    <header id="header" class="header-container">
+        <span class="header-arrow inactive">&lt;</span>
+        <h1 class="header-title">Dillvana 4</h1>
         <h2 class="header-title header-title-categoryView inactive">Nombre de la categoría</h2>
 
         <div id="toggleIcon" class="header-toggleIcon">
@@ -26,16 +26,16 @@
 
         <aside id="asideMenu" class="header-asideMenu inactive">
             <ul class="asideMenu-list">
-                <li class="asideMenu-item"><a href="#">Action</a></li>
+                <!-- <li class="asideMenu-item"><a href="#">Action</a></li>
                 <li class="asideMenu-item"><a href="#">Adventure</a></li>
                 <li class="asideMenu-item"><a href="#">Comedy</a></li>
                 <li class="asideMenu-item"><a href="#">Romance</a></li>
                 <li class="asideMenu-item"><a href="#">Musical</a></li>
-                <li class="asideMenu-item"><a href="#">Drama</a></li>
+                <li class="asideMenu-item"><a href="#">Drama</a></li> -->
             </ul>
         </aside>
 
-        <form id="searchForm" class="header-searchForm inactive">
+        <form id="searchForm" class="header-searchForm">
             <input type="text" placeholder="Avengers, Avatar, Creed...">
             <button>🔎</button>
         </form>
@@ -43,7 +43,7 @@
         
     </header>
 
-    <section id="trendingPreview" class="trendingPreview-container inactive">
+    <section id="trendingPreview" class="trendingPreview-container">
         <div class="trendingPreview-header">
             <h2 class="trendingPreview-title">Trending movies</h2>
             <button class="trendingPreview-button">Show more</button>
@@ -55,8 +55,8 @@
                 <input type="radio" name="slider" id="item-2">
                 <input type="radio" name="slider" id="item-3">
 
-                <div class="trendingPreview-posters">
-                    <label id="selector-1" for="item-1" class="poster">
+                <div id="trendingMovies" class="trendingPreview-posters">
+                    <!-- <label id="selector-1" for="item-1" class="poster">
                         <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
                     </label>
                     <label id="selector-2" for="item-2" class="poster">
@@ -64,7 +64,7 @@
                     </label>
                     <label id="selector-3" for="item-3" class="poster">
                         <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
-                    </label>
+                    </label> -->
                 </div>
             </div>
         </article>
@@ -80,8 +80,8 @@
                 <input type="radio" name="slider" id="item-5">
                 <input type="radio" name="slider" id="item-6">
 
-                <div class="trendingPreview-posters">
-                    <label id="selector-4" for="item-4" class="poster">
+                <div id="trendingSeries" class="trendingPreview-posters">
+                    <!-- <label id="selector-4" for="item-4" class="poster">
                         <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
                     </label>
                     <label id="selector-5" for="item-5" class="poster">
@@ -89,7 +89,7 @@
                     </label>
                     <label id="selector-6" for="item-6" class="poster">
                         <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
-                    </label>
+                    </label> -->
                 </div>
             </div>
         </article>
@@ -108,7 +108,7 @@
             <img src="https://image.tmdb.org/t/p/w300/uKvVjHNqB5VmOrdxqAt2F7J78ED.jpg" alt="Name of the movie">
         </div>
     </section>
-    <section id="movieDetail" class="movieDetail-container">
+    <section id="movieDetail" class="movieDetail-container inactive">
         <h2 class="movieDetail-title">The last of us</h2>
         <span class="movieDetail-score">9.5 / 10 ⭐</span>
         <p class="movieDetail-description">
@@ -144,6 +144,7 @@
     </section>
 
     <footer>Practicando API REST @dillmanncode</footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/secret.js"></script>
     <script src="./src/main.js"></script>
 </body>
