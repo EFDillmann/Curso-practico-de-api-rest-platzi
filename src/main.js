@@ -89,7 +89,3 @@ const getCategoriesPreview = async () => {
 
 
 }
-
-getTrendingMoviesPreview();
-getTrendingSeriesPreview();
-getCategoriesPreview();
