@@ -10,11 +10,6 @@ const api = axios.create({
 });
 
 // Toggle menú
-const headerToggle = document.querySelector(".header-toggleIcon");
-const toggleLine1 = document.querySelector(".toggleIcon-line1");
-const toggleLine2 = document.querySelector(".toggleIcon-line2");
-const toggleLine3 = document.querySelector(".toggleIcon-line3");
-const asideMenu = document.querySelector("#asideMenu");
 
 headerToggle.addEventListener("click", () => {
     toggleLine1.classList.toggle("toggleIcon-line1Active");
@@ -31,8 +26,9 @@ const getTrendingMoviesPreview = async () => {
     const { data } = await api(`trending/movie/week`);
     const movies = data.results;
 
-    const trendingPreviewPosters = document.querySelector("#trendingMovies");
-    trendingPreviewPosters.innerHTML = `
+    trendingPreviewMoviesPosters.innerHTML = "";
+
+    trendingPreviewMoviesPosters.innerHTML = `
     <label id="selector-1" for="item-1" class="poster">
         <img src=${genericPoster}${movies[0].poster_path} alt=${movies[0].title}>
     </label>
@@ -49,8 +45,9 @@ const getTrendingSeriesPreview = async () => {
     const { data } = await api(`trending/tv/day`);
     const series = data.results;
 
-    const trendingPreviewPosters = document.querySelector("#trendingSeries");
-    trendingPreviewPosters.innerHTML = `
+    trendingPreviewSeriesPosters.innerHTML = "";
+
+    trendingPreviewSeriesPosters.innerHTML = `
     <label id="selector-4" for="item-4" class="poster">
         <img src=${genericPoster}${series[0].poster_path} alt=${series[0].title}>
     </label>
@@ -67,9 +64,9 @@ const getCategoriesPreview = async () => {
     const { data } = await api(`genre/movie/list`);
     const categories = data.genres;
 
-    categories.forEach(category => {
-        const asideMenu = document.querySelector("#asideMenu .asideMenu-list");
+    asideMenuList.innerHTML = "";
 
+    categories.forEach(category => {
                 // <li class="asideMenu-item"><a href="#">Action</a></li>
                 // <li class="asideMenu-item"><a href="#">Adventure</a></li>
                 // <li class="asideMenu-item"><a href="#">Comedy</a></li>
@@ -84,8 +81,9 @@ const getCategoriesPreview = async () => {
         asideMenuLink.setAttribute("href", "#");
         asideMenuLink.innerText=`${category.name}`;
 
-        asideMenu.appendChild(asideMenuItem);
+        asideMenuList.appendChild(asideMenuItem);
     });
 
 
 }
+

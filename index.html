@@ -15,7 +15,7 @@
 <body>
     <header id="header" class="header-container">
         <span class="header-arrow inactive">&lt;</span>
-        <h1 class="header-title">Dillvana 4</h1>
+        <h1 id="headerTitle" class="header-title">Dillvana 4</h1>
         <h2 class="header-title header-title-categoryView inactive">Nombre de la categoría</h2>
 
         <div id="toggleIcon" class="header-toggleIcon">
@@ -36,8 +36,8 @@
         </aside>
 
         <form id="searchForm" class="header-searchForm">
-            <input type="text" placeholder="Avengers, Avatar, Creed...">
-            <button>🔎</button>
+            <input id="searchFormInput" type="text" placeholder="Avengers, Avatar, Creed...">
+            <button id="searchFormBtn">🔎</button>
         </form>
 
         
@@ -146,6 +146,7 @@
     <footer>Practicando API REST @dillmanncode</footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./src/secret.js"></script>
+    <script src="./src/nodes.js"></script>
     <script src="./src/main.js"></script>
     <script src="./src/navigation.js"></script>
 </body>

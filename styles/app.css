@@ -186,7 +186,7 @@ input::placeholder{
 }
 .header-asideMenu{
     width: 45%;
-    height: 100vh;
+    height: 94.2vh;
     position: absolute;
     background-color: var(--ligth-blue);
     z-index: 2;
