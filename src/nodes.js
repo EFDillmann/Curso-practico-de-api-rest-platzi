@@ -17,7 +17,7 @@ const searchFormBtn = document.querySelector("#searchFormBtn");
 
 // Trending preview section
 const trendingPreviewSection = document.querySelector("#trendingPreview");
-const trendingPreviewButton = document.querySelector("#trendingPreview .trendingPreview-header .trendingPreview-button");
+const trendingPreviewButton = document.querySelectorAll("button.trendingPreview-button");
 const trendingPreviewMoviesPosters = document.querySelector("#trendingMovies");
 const trendingPreviewSeriesPosters = document.querySelector("#trendingSeries");
 
@@ -26,6 +26,9 @@ const verticalListSection = document.querySelector("#verticalList");
 
 // Movie detail section
 const movieDetailSection = document.querySelector("#movieDetail");
+const movieDetailTitle = document.querySelector(".movieDetail-title");
+const movieDetailDescription = document.querySelector(".movieDetail-description");
+const movieDetailScore = document.querySelector(".movieDetail-score");
 const movieDetailCategories = document.querySelector("#movieDetail .movieDetail-categoriesList");
 const movieDetailRelated = document.querySelector("#movieDetail .relatedMovies-container");
 const movieDetailRelatedList = document.querySelector("#movieDetail .relatedMovies-container .relatedMovies-list");

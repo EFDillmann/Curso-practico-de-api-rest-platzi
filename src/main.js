@@ -18,6 +18,10 @@ function createMovies (array, container) {
         const movieContainerPoster = document.createElement("img");
 
         movieContainer.classList.add("movie-container");
+        movieContainer.addEventListener("click", () => {
+            location.hash = `movie=${movie.id}`;
+        })
+
         movieContainerPoster.setAttribute("src", `${genericPoster}${movie.poster_path
         }`);
         movieContainerPoster.setAttribute("alt", `${movie.title}`);
@@ -116,7 +120,7 @@ const getCategoriesPreview = async () => {
 }
 
 const getMovieByCategory = async (id) => {
-    const { data } = await api(`/discover/movie`, {
+    const { data } = await api(`discover/movie`, {
         params: {
             with_genres: id,
         },
@@ -126,4 +130,64 @@ const getMovieByCategory = async (id) => {
     // console.log(movies);
 
     createMovies(movies, verticalListSection);
+}
+
+const getMoviesBySearch = async (query) => {
+    const { data } = await api(`search/movie`, {
+        params: {
+            query,
+        },
+    });
+    const movies = data.results;
+
+    // console.log(movies);
+
+    createMovies(movies, verticalListSection);
+
+    searchFormInput.value = "";
+}
+
+const getTrendingMovies = async () => {
+    const { data } = await api("trending/movie/week");
+    const movies = data.results;
+
+    createMovies(movies, verticalListSection);
+}
+
+const getTrendingSeries = async () => {
+    const { data } = await api("trending/tv/day");
+    const series = data.results;
+
+    createMovies(series, verticalListSection);
+}
+
+const getMovieById = async (id) => {
+    const { data: movie } = await api(`movie/${id}`);
+
+    movieDetailTitle.textContent= movie.title;
+    movieDetailScore.textContent= movie.vote_average + "/10 ⭐";
+    movieDetailDescription.textContent= movie.overview;
+
+    // <div class="category-container">
+    //     <h3 class="category-title">Drama</h3>
+    // </div>
+    movie.genres.forEach(genre => {
+        const categoryContainer = document.createElement("div");
+        const categoryTitle = document.createElement("h3");
+
+        categoryTitle.textContent= genre.name;
+        categoryContainer.appendChild(categoryTitle);
+        movieDetailCategories.appendChild(categoryContainer);
+    });
+
+    const movieImgUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
+    headerSection.style.background = `url(${movieImgUrl}) no-repeat center`;
+    headerSection.style.backgroundSize = "cover";
+}
+
+const getRelatedMoviesById = async (id) => {
+    const { data } = await api(`movie/${id}/recommendations`);
+    const relatedMovies = data.results;
+
+    createMovies(relatedMovies, movieDetailRelatedList);
 }
